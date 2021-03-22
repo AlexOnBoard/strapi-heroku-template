@@ -20,7 +20,7 @@ if (process.env.NEW_DATABASE_URL) {
       console.warn("create .env file error: ", err);
     }
   });
-  console.log(".env file is generated");
+  console.log(".env file is generated", output);
 }
 
 console.log("Finish running postgres-env");
