@@ -1,8 +1,8 @@
 console.log("Start running postgres-env");
 const fs = require("fs");
 
-if (process.env.DATABASE_URL) {
-  const databaseConfig = process.env.DATABASE_URL.split("//")[1];
+if (process.env.NEW_DATABASE_URL) {
+  const databaseConfig = process.env.NEW_DATABASE_URL.split("//")[1];
   const [username, passwordAndDb, hostAndPort] = databaseConfig.split(":");
   const [password, host] = passwordAndDb.split("@");
   const [port, databaseName] = hostAndPort.split("/");
